@@ -757,7 +757,7 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_label_Aduan_JKR_Hupk_2_eval_expression(context) {
+function exp_label_Aduan_JKR_Hupk_5_eval_expression(context) {
     // 'Tarikh Aduan: ' || "Tarikh Aduan" || '\nAduan: ' || left(Ringkasan_Aduan, 20)
 
     var feature = context.feature;
@@ -770,7 +770,7 @@ function exp_label_Aduan_JKR_Hupk_2_eval_expression(context) {
 }
 
 
-function exp_label_Sistem_Amaran_Awal_SAA_CKC_3_eval_expression(context) {
+function exp_label_Sistem_Amaran_Awal_SAA_CKC_6_eval_expression(context) {
     // "No. Laluan" || ' sk' || Seksyen || '\nStatus: ' || "Status Amaran" || '\nTarikh ' || left(Tarikh, 10)
 
     var feature = context.feature;
@@ -783,20 +783,7 @@ function exp_label_Sistem_Amaran_Awal_SAA_CKC_3_eval_expression(context) {
 }
 
 
-function exp_label_20260629RAMsDataKemalanganGIS_4_eval_expression(context) {
-    // Tahun || ' (Bulan ' || Bulan || ')' || '\nNo.Laporan: ' || "No Laporan" || '\nJenis: ' || "Jenis Langgar Pertama" || '\nWaktu/Cuaca: ' || Cahaya || ' & ' || Cuaca
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (((((((((((feature.properties['Tahun']  + ' (Bulan ') + feature.properties['Bulan'] ) + ')') + '\nNo.Laporan: ') + feature.properties['No Laporan'] ) + '\nJenis: ') + feature.properties['Jenis Langgar Pertama'] ) + '\nWaktu/Cuaca: ') + feature.properties['Cahaya'] ) + ' & ') + feature.properties['Cuaca'] );
-    } else {
-        return (((((((((((feature['Tahun']  + ' (Bulan ') + feature['Bulan'] ) + ')') + '\nNo.Laporan: ') + feature['No Laporan'] ) + '\nJenis: ') + feature['Jenis Langgar Pertama'] ) + '\nWaktu/Cuaca: ') + feature['Cahaya'] ) + ' & ') + feature['Cuaca'] );
-    }
-}
-
-
-function exp_label_Aduan_JKR_Hupk_2_eval_expression(context) {
+function exp_label_Aduan_JKR_Hupk_5_eval_expression(context) {
     // 'Tarikh Aduan: ' || "Tarikh Aduan" || '\nAduan: ' || left(Ringkasan_Aduan, 20)
 
     var feature = context.feature;
@@ -809,7 +796,7 @@ function exp_label_Aduan_JKR_Hupk_2_eval_expression(context) {
 }
 
 
-function exp_Aduan_JKR_Hupk_2rule0_eval_expression(context) {
+function exp_Aduan_JKR_Hupk_5rule0_eval_expression(context) {
     // Status = 'Belum Tutup'
 
     var feature = context.feature;
@@ -822,7 +809,7 @@ function exp_Aduan_JKR_Hupk_2rule0_eval_expression(context) {
 }
 
 
-function exp_Aduan_JKR_Hupk_2rule1_eval_expression(context) {
+function exp_Aduan_JKR_Hupk_5rule1_eval_expression(context) {
     // Status = 'Tutup'
 
     var feature = context.feature;
@@ -835,7 +822,7 @@ function exp_Aduan_JKR_Hupk_2rule1_eval_expression(context) {
 }
 
 
-function exp_label_Sistem_Amaran_Awal_SAA_CKC_3_eval_expression(context) {
+function exp_label_Sistem_Amaran_Awal_SAA_CKC_6_eval_expression(context) {
     // "No. Laluan" || ' sk' || Seksyen || '\nStatus: ' || "Status Amaran" || '\nTarikh ' || left(Tarikh, 10)
 
     var feature = context.feature;
@@ -844,18 +831,5 @@ function exp_label_Sistem_Amaran_Awal_SAA_CKC_3_eval_expression(context) {
         return ((((((feature.properties['No. Laluan']  + ' sk') + feature.properties['Seksyen'] ) + '\nStatus: ') + feature.properties['Status Amaran'] ) + '\nTarikh ') + fnc_left([feature.properties['Tarikh'] ,10], context));
     } else {
         return ((((((feature['No. Laluan']  + ' sk') + feature['Seksyen'] ) + '\nStatus: ') + feature['Status Amaran'] ) + '\nTarikh ') + fnc_left([feature['Tarikh'] ,10], context));
-    }
-}
-
-
-function exp_label_20260629RAMsDataKemalanganGIS_4_eval_expression(context) {
-    // Tahun || ' (Bulan ' || Bulan || ')' || '\nNo.Laporan: ' || "No Laporan" || '\nJenis: ' || "Jenis Langgar Pertama" || '\nWaktu/Cuaca: ' || Cahaya || ' & ' || Cuaca
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (((((((((((feature.properties['Tahun']  + ' (Bulan ') + feature.properties['Bulan'] ) + ')') + '\nNo.Laporan: ') + feature.properties['No Laporan'] ) + '\nJenis: ') + feature.properties['Jenis Langgar Pertama'] ) + '\nWaktu/Cuaca: ') + feature.properties['Cahaya'] ) + ' & ') + feature.properties['Cuaca'] );
-    } else {
-        return (((((((((((feature['Tahun']  + ' (Bulan ') + feature['Bulan'] ) + ')') + '\nNo.Laporan: ') + feature['No Laporan'] ) + '\nJenis: ') + feature['Jenis Langgar Pertama'] ) + '\nWaktu/Cuaca: ') + feature['Cahaya'] ) + ' & ') + feature['Cuaca'] );
     }
 }
